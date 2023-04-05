@@ -22,9 +22,9 @@ function handleSubmit(e) {
   profit = purchase * profit;
   sale = iva + profit + purchase;
 
-  $viewSale.innerText = sale;
-  $viewProfit.innerText = profit;
-  $viewIVA.innerText = iva;
+  $viewSale.innerText = sale.toFixed(2);
+  $viewProfit.innerText = profit.toFixed(2);
+  $viewIVA.innerText = iva.toFixed(2);
   myModal.show();
 }
 
