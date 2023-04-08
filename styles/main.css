@@ -6,3 +6,9 @@ body {
   background-color: blue;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.content{
+  width: 400px;
+    display: flex;
+  justify-content: center;
+}
