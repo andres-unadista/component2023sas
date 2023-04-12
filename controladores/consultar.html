@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Component 2023 SAS</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/bootstrap-grid.min.css">
+  <style>
+    .bg-menu {
+      background-color: #457b9d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-menu">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Component 2023 SAS</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../administrator.html" aria-current="page">Administrador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../inventory.html">Inventario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../utilities.html">Utilidades</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- AÑADIR INVENTARIO -->
+    <section class="content">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+      <div class="card-title text-center"><h3>Consultar Producto por Codigo</h3></div>
+      <hr>
+      <!-- ALFONSIN NEWBALL -->
+      
+         <form action="controladores/registro.php" method="post">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="form-group">
+                            <label for="codigo"></label>
+                            <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Digite el codigo del producto" required>
+
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <hr>
+                <a href="../inventory.html">
+                <button type="button" onclick="captura()" class="btn btn-danger">Consultar</button>
+                
+              </a>
+            </div>
+         </form>
+        </div>
+        <div class="col-md-2"></div>
+
+      
+    
+      <!-- ALFONSIN NEWBALL -->
+    
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+  <footer>
+    <div class="container fixed-bottom text-center bg-light p-2">
+      <span class="fw-bold">Grupo 301127_32</span>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous">
+    </script>
+    
+    <!-- AÑADIR INVENTARIO -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- AÑADIR INVENTARIO -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
