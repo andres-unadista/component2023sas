@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="styles/bootstrap-grid.min.css">
   <style>
     .bg-menu {
       background-color: #457b9d;
@@ -30,8 +30,21 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="../administrator.html" aria-current="page">Administrador</a>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Administrador
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="/src/controllers/database.php?db=create_db">Crear base de datos</a></li>
+                    <li><a class="dropdown-item" href="/src/controllers/database.php?db=create_table">Crear tabla</a></li>
+                    <li><a class="dropdown-item" href="#">Generar reporte PDF</a></li>
+                    <li><a class="dropdown-item" href="#">Generar backup</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../inventory.html">Inventario</a>
@@ -49,75 +62,77 @@
     <section class="content">
       <div class="container">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-      <div class="card-title text-center"><h3>Modificar datos del producto</h3></div>
-      <hr>
-      <!-- ALFONSIN NEWBALL -->
-      
-         <form action="controladores/registro.php" method="post">
-            <div class="card-body">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <div class="card-title text-center">
+              <h3>Modificar datos del producto</h3>
+            </div>
+            <hr>
+            <!-- ALFONSIN NEWBALL -->
+
+            <form action="controladores/registro.php" method="post">
+              <div class="card-body">
                 <div class="row">
-                    <div class="col-sm-12">
+                  <div class="col-sm-12">
 
-                        <table class="table" id="tabladatos">
-                            <thead>
-                              <tr>
-                                <th scope="col">Codigo</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Marca</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantiad</th>
-                             </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Computador</td>
-                                <td>HP</td>
-                                <td>$2.000.000</td>
-                                <td>10</td>
-                                
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Televisor</td>
-                                <td>Sony</td>
-                                <td>$5.000.000</td>
-                                <td>34</td>
-                               
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Tablet</td>
-                                <td>Lenovo</td>
-                                <td>300.000</td>
-                                <td>100</td>
-                               
-                              </tr>
-                            </tbody>
-                          </table>
+                    <table class="table" id="tabladatos">
+                      <thead>
+                        <tr>
+                          <th scope="col">Codigo</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Marca</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">Cantidad</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Computador</td>
+                          <td>HP</td>
+                          <td>$2.000.000</td>
+                          <td>10</td>
 
-                    </div>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Televisor</td>
+                          <td>Sony</td>
+                          <td>$5.000.000</td>
+                          <td>34</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Tablet</td>
+                          <td>Lenovo</td>
+                          <td>300.000</td>
+                          <td>100</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
                 </div>
-            </div>
-            <div class="card-footer text-center">
+              </div>
+              <div class="card-footer text-center">
                 <hr>
-                
-                <button type="button" onclick="cambiar()" class="btn btn-danger" value="cambiar dato">Modificar</button>
-              
-            </div>
-         </form>
-        </div>
-        <div class="col-md-2"></div>
 
-      
-    
-      <!-- ALFONSIN NEWBALL -->
-    
+                <button type="button" onclick="cambiar()" class="btn btn-danger" value="cambiar dato">Modificar</button>
+
+              </div>
+            </form>
+          </div>
+          <div class="col-md-2"></div>
+
+
+
+          <!-- ALFONSIN NEWBALL -->
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
   </main>
@@ -130,28 +145,28 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous">
     </script>
-    
-    <!-- AÑADIR INVENTARIO -->
-    <script src="js/bootstrap.min.js"></script>
 
-    <!-- AÑADIR INVENTARIO -->
+  <!-- AÑADIR INVENTARIO -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- AÑADIR INVENTARIO -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
     crossorigin="anonymous">
     </script>
 
-<script>
-    function cambiar(){
-        let fila =parseInt(prompt('digite numero de fila entre 2 y 4:',2));
-        let columna =parseInt(prompt('digite el numero de la columna entre 1 y 5:',1));
-      
-        if((fila >= 1 && fila <= 3) && (columna >= 1 && columna <= 5)){
-            let celdas = document.getElementById('tabladatos').rows[fila - 1].cells;
-            celdas[columna - 1].innerHTML = prompt('Digite el valor de la celda');
-        }
+  <script>
+    function cambiar() {
+      let fila = parseInt(prompt('digite numero de fila entre 2 y 4:', 2));
+      let columna = parseInt(prompt('digite el numero de la columna entre 1 y 5:', 1));
+
+      if ((fila >= 1 && fila <= 3) && (columna >= 1 && columna <= 5)) {
+        let celdas = document.getElementById('tabladatos').rows[fila - 1].cells;
+        celdas[columna - 1].innerHTML = prompt('Digite el valor de la celda');
+      }
 
     }
-</script>
+  </script>
 
 </body>
 
