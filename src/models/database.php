@@ -6,7 +6,7 @@ class Database
     // credenciales
     $servername = "localhost";
     $username = "root";
-    $password = ""; //12345678
+    $password = "12345678"; //12345678
 
     try {
       // se crea una instancia PDO
@@ -31,7 +31,7 @@ class Database
   {
     $servername = "localhost";
     $username = "root";
-    $password = ""; //12345678
+    $password = "12345678"; //12345678
     $dbname = "bdunad32";
 
     try {
@@ -39,7 +39,7 @@ class Database
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       // sentencia sql 
-      $sql = "CREATE TABLE usuarios (
+      $sql = "CREATE TABLE tabla32 (
       id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
       nombre VARCHAR(30) NOT NULL,
       email VARCHAR(50) NOT NULL,
