@@ -5,6 +5,17 @@
     
     if(isset($_GET['nombre'])){
         echo 'hola entraste al if';
+
+        $nombre =$GET['nombre'];
+        $marca =$GET['marca'];
+        $precio =$GET['precio'];
+        $cantidad =$GET['cantidad'];
+
+        $insertar = $con->prepare("INSERT INTO producto(id,nombre,marca,precio,cantidad) VALUES (null, '$nombre','$marca','$precio','$cantidad')";
+        $insertar->execute();
+        
+
+
     }
     ?>
 
