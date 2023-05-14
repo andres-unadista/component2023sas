@@ -1,4 +1,14 @@
-<!doctype html>
+<!doctype html>}
+
+<?php
+    $con = new PDO('mysql:host=localhost;dbname=registro','root','');
+    
+    if(isset($_GET['nombre'])){
+        echo 'hola entraste al if';
+    }
+    ?>
+
+
 <html lang="en">
 
 <head>
