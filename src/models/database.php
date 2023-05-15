@@ -1,16 +1,23 @@
 <?php
 class Database
 {
+  private static $servername = "localhost";
+  private static $username = "root";
+  private static $password = "12345678"; //12345678
+  private static $dbname = "bdunad32";
+
+  public static function getConnection()
+  {
+    $conn = new PDO("mysql:host=" . self::$servername . ";dbname=" . self::$dbname, self::$username, self::$password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $conn;
+  }
+
   static function createDatabase()
   {
-    // credenciales
-    $servername = "localhost";
-    $username = "root";
-    $password = "12345678"; //12345678
-
     try {
       // se crea una instancia PDO
-      $conn = new PDO("mysql:host=$servername", $username, $password);
+      $conn = new PDO("mysql:host=" . self::$servername, self::$username, self::$password);
       // configuración para mostrar errores PDO
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -29,14 +36,8 @@ class Database
 
   static function createTable()
   {
-    $servername = "localhost";
-    $username = "root";
-    $password = "12345678"; //12345678
-    $dbname = "bdunad32";
-
     try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $conn = self::getConnection();
 
       // sentencia sql 
       $sql = "CREATE TABLE tabla32 (
@@ -52,6 +53,5 @@ class Database
     } catch (PDOException $e) {
       echo $sql . "<br>" . $e->getMessage();
     }
-    $conn = null;
   }
 }

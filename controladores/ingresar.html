@@ -39,7 +39,7 @@
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="/src/controllers/database.php?db=create_db">Crear base de datos</a></li>
                     <li><a class="dropdown-item" href="/src/controllers/database.php?db=create_table">Crear tabla</a></li>
-                    <li><a class="dropdown-item" href="#">Generar reporte PDF</a></li>
+                    <li><a class="dropdown-item" href="/src/controllers/products.php?db=pdf">Generar reporte PDF</a></li>
                     <li><a class="dropdown-item" href="#">Generar backup</a></li>
                   </ul>
                 </li>
@@ -69,34 +69,34 @@
             <hr>
             <!-- ALFONSIN NEWBALL -->
 
-            <form action="controladores/registro.php" method="post">
+            <form action="/src/controllers/products.php?db=ingresar" method="post">
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-12">
 
                     <div class="form-group">
                       <label for="codigo">Codigo de producto</label>
-                      <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Digite el codigo del producto" required>
+                      <input type="text" class="form-control" name="code" id="codigo" placeholder="Digite el codigo del producto" required>
                     </div>
 
                     <div class="form-group">
                       <label for="nombre">Nombre del producto</label>
-                      <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Digite el nombre del producto" required>
+                      <input type="text" class="form-control" name="name" id="nombre" placeholder="Digite el nombre del producto" required>
                     </div>
 
                     <div class="form-group">
                       <label for="marca">Marca del producto</label>
-                      <input type="text" class="form-control" name="marca" id="marca" placeholder="Digite la marca del producto" required>
+                      <input type="text" class="form-control" name="brand" id="marca" placeholder="Digite la marca del producto" required>
                     </div>
 
                     <div class="form-group">
                       <label for="precio">Precio de compra del producto</label>
-                      <input type="text" class="form-control" name="precio" id="precio" placeholder="Digite el precio de compra del producto" required>
+                      <input type="text" class="form-control" name="price" id="precio" placeholder="Digite el precio de compra del producto" required>
                     </div>
 
                     <div class="form-group">
                       <label for="cantidad">Cantidd comprada del producto</label>
-                      <input type="text" class="form-control" name="cantidad" id="cantidad" placeholder="Digite la cantidad comprada del producto" required>
+                      <input type="text" class="form-control" name="quantity" id="cantidad" placeholder="Digite la cantidad comprada del producto" required>
                     </div>
 
                   </div>
@@ -104,9 +104,7 @@
               </div>
               <div class="card-footer text-center">
                 <hr>
-                <a href="../inventory.html">
-                  <button type="button" onclick="captura()" class="btn btn-danger">Registrar</button>
-                </a>
+                <button type="submit" class="btn btn-primary">Registrar</button>
               </div>
             </form>
           </div>
