@@ -3,7 +3,7 @@ class Database
 {
   private static $servername = "localhost";
   private static $username = "root";
-  private static $password = "12345678"; //12345678
+  private static $password = ""; //12345678
   private static $dbname = "bdunad32";
 
   public static function getConnection()
@@ -27,7 +27,7 @@ class Database
       $conn->exec($sql);
       echo "Base de datos creada correctamente";
     } catch (PDOException $e) {
-      echo $sql . "<br>" . $e->getMessage();
+      echo $e->getMessage();
     }
 
     // se limpia la conexión
@@ -51,7 +51,7 @@ class Database
       $conn->exec($sql);
       echo "Tabla usuarios creada correctamente";
     } catch (PDOException $e) {
-      echo $sql . "<br>" . $e->getMessage();
+      echo $e->getMessage();
     }
   }
 }
